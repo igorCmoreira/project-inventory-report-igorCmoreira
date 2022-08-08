@@ -5,7 +5,7 @@ from inventory_report.reports.simple_report import SimpleReport
 mock = [
     {
         "nome_da_empresa": "farinha",
-        "data_de_fabricação": "2022-09-03",
+        "data_de_fabricacao": "2022-09-03",
         "data_de_validade": "2025-12-12",
     }
 ]
