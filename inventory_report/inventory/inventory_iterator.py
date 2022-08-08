@@ -1,7 +1,7 @@
-from collections.abc import Interator
+from collections.abc import Iterator
 
 
-class InventoryIterator(Interator):
+class InventoryIterator(Iterator):
 
     def __init__(self, products):
         self.list = products
