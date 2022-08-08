@@ -7,17 +7,13 @@ class CompleteReport(SimpleReport):
     def generate(produtos):
         relatorio_simples = SimpleReport.generate(produtos)
         lista_de_empresas = [
-            produto["nome_da_empresa"] for produto in produtos
+            empresa["nome_da_empresa"] for empresa in produtos
         ]
         retorno = ""
-
-        nomes_das_empresas = Counter(lista_de_empresas).most_common()
-
-        for nome, quantidade in nomes_das_empresas:
-            retorno += f"- {nome} : {quantidade}/n"
-
+        for empresa, quantidade in Counter(lista_de_empresas).most_common():
+            retorno += f"- {empresa}: {quantidade}\n"
         return (
-            f"{relatorio_simples}/n"
-            "Produtos estocados por empresas:/n"
+            f"{relatorio_simples}"
+            "Produtos estocados por empresa:\n"
             f"{retorno}"
         )
