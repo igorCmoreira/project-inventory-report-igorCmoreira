@@ -13,7 +13,7 @@ class CompleteReport(SimpleReport):
         for empresa, quantidade in Counter(lista_de_empresas).most_common():
             retorno += f"- {empresa}: {quantidade}\n"
         return (
-            f"{relatorio_simples}"
+            f"{relatorio_simples}\n"
             "Produtos estocados por empresa:\n"
             f"{retorno}"
         )
